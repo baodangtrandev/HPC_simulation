@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid/simgrid.dtd">
+<platform version="4">
+  <AS id="AS0" routing="Full">
+    <cluster id="my_cluster_1" prefix="c-" suffix="" radical="0-287" speed="1Gf" bw="125GBps" lat="0" router_id="router1"/>
+
+    <AS id="AS1" routing="None">
+      <host id="master_host" speed="1Gf"/>
+    </AS>
+
+    <link id="backbone" bandwidth="125GBps" latency="0" sharing_policy="FATPIPE"/>
+
+    <ASroute src="my_cluster_1" dst="AS1" gw_src="router1" gw_dst="master_host">
+      <link_ctn id="backbone"/>
+    </ASroute>
+  </AS>
+</platform>

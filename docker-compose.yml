@@ -1,0 +1,9 @@
+version: '3'
+services:
+  python:
+    build: .
+    platform: linux/x86_64
+    volumes:
+      - .:/home/code
+    network_mode: "host"
+    # command: tail -F anything

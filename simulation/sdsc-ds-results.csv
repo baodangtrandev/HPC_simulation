@@ -1,0 +1,6 @@
+name, batsim_version,consumed_joules,makespan,max_slowdown,max_turnaround_time,max_waiting_time,mean_slowdown,mean_turnaround_time,mean_waiting_time,nb_computing_machines,nb_grouped_switches,nb_jobs,nb_jobs_finished,nb_jobs_killed,nb_jobs_rejected,nb_jobs_success,nb_machine_switches,scheduling_time,simulation_time,success_rate,time_computing,time_idle,time_sleeping,time_switching_off,time_switching_on,time_unavailable
+easy,3.1.0,0.000000,31640894.000000,2426.615385,226173.000000,99701.000000,6.219412,6379.512899,1098.242142,171,0,49343,49343,326,0,49017,0,324.977845,1927.041059,0.993393,1888336218.000000,3511273348.000000,0.000000,0.000000,0.000000,0.000000
+easy_fatten,
+easy_buffer,3.1.0,0.000000,31640894.000000,2426.615385,243532.000000,99701.000000,5.687406,6248.777881,967.507124,171,0,49343,49343,326,0,49017,0,445.185308,2118.404738,0.993393,1888336218.000000,3508241227.000000,0.000000,0.000000,0.000000,0.000000
+
+
