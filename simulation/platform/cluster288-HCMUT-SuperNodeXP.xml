@@ -4,7 +4,7 @@
   <AS id="AS0" routing="Full">
     <cluster id="my_cluster_1" prefix="c-" suffix="" radical="0-287" speed="1Gf" bw="125GBps" lat="0" router_id="router1"/>
 
-    <AS id="AS1" routing="None">
+    <AS id="AS1" routing="Full">
       <host id="master_host" speed="1Gf"/>
     </AS>
 

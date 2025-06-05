@@ -5,8 +5,12 @@
     <cluster id="my_cluster_1" prefix="c-" suffix="" radical="0-639" speed="1Gf" bw="125GBps" lat="0"
              router_id="router1"/>
 
-    <AS id="AS1" routing="None">
+    <AS id="AS1" routing="Full">
       <host id="master_host" speed="1Gf"/>
+      <link id="internal_link" bandwidth="125GBps" latency="0"/>
+      <route src="master_host" dst="master_host">
+        <link_ctn id="internal_link"/>
+      </route>
     </AS>
 
     <link id="backbone" bandwidth="125GBps" latency="0" sharing_policy="FATPIPE"/>
