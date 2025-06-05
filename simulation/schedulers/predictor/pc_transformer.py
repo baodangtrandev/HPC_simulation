@@ -423,8 +423,8 @@ def setup_pctransformer_config(input_dim=4, d_model=64, num_heads=8, d_ff=256, n
     """
     Thiết lập cấu hình cho PC-Transformer model
     """
-    if not hasattr(PCTransformerWalltimePrediction, "_instance"):
-        PCTransformerWalltimePrediction._instance = PCTransformerWalltimePredictor()
+    # if not hasattr(PCTransformerWalltimePrediction, "_instance"):
+    PCTransformerWalltimePrediction._instance = PCTransformerWalltimePredictor()
     
     predictor = PCTransformerWalltimePrediction._instance
     new_config = {

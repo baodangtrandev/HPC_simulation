@@ -4,7 +4,7 @@ from procset import ProcSet
 import logging
 # from predictor.knn import KnnWalltimePredictor
 # from predictor.hdem_v2 import HDEMWalltimePrediction
-from predictor.lstm import LSTMWalltimePrediction
+from predictor.lstm_v2 import LSTMWalltimePredictor
 from copy import deepcopy
 import json
 import numpy as np
@@ -41,7 +41,7 @@ class Easy_lstm(BatsimScheduler):
             self.bs.reject_jobs([job])
 
         # predict job actual walltime
-        predict_walltime = LSTMWalltimePrediction(self.finishedJobs, job)
+        predict_walltime = LSTMWalltimePredictor(self.finishedJobs, job)
 
         # Reserve hard walltime
         job.user_requested_time = job.requested_time

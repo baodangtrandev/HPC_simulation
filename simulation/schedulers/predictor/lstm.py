@@ -322,8 +322,8 @@ def LSTMWalltimePrediction(finished_jobs, job, data_size=1000, use_user_estimate
     - Thời gian dự đoán
     """
     # Singleton pattern để tái sử dụng model đã train
-    if not hasattr(LSTMWalltimePrediction, "_instance"):
-        LSTMWalltimePrediction._instance = LSTMWalltimePredictor()
+    # if not hasattr(LSTMWalltimePrediction, "_instance"):
+    LSTMWalltimePrediction._instance = LSTMWalltimePredictor()
     
     predictor = LSTMWalltimePrediction._instance
     return predictor.predict(finished_jobs, job, data_size, use_user_estimate, model_name)

@@ -38,7 +38,7 @@ class RNNWalltimePredictor:
                 "num_layers": 3,
                 "dropout": 0.2,
                 "sequence_length": 10,
-                "epochs": 50,
+                "epochs": 10,
                 "learning_rate": 0.001,
                 "batch_size": 32
             }
@@ -261,7 +261,7 @@ def RNNWalltimePrediction(finished_jobs, job, data_size=1000, use_user_estimate=
 
 # Utility functions
 def setup_rnn_config(input_size=4, hidden_size=64, num_layers=3, dropout=0.2, 
-                     sequence_length=10, epochs=50, learning_rate=0.001):
+                     sequence_length=10, epochs=10, learning_rate=0.001):
     """
     Thiết lập cấu hình cho RNN model
     """

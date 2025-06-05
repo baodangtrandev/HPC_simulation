@@ -2,7 +2,7 @@ from batsim.batsim import BatsimScheduler
 from sortedcontainers import SortedSet, SortedList, SortedListWithKey
 from procset import ProcSet
 import logging
-from predictor.pc_transformer import PCTransformerWalltimePrediction
+from predictor.pc_transformer_v2 import PCTransformerWalltimePredictor
 from copy import deepcopy
 import json
 import numpy as np
@@ -39,7 +39,7 @@ class Easy_pctransformer(BatsimScheduler):
             self.bs.reject_jobs([job])
 
         # predict job actual walltime
-        predict_walltime = PCTransformerWalltimePrediction(self.finishedJobs, job)
+        predict_walltime = PCTransformerWalltimePredictor(self.finishedJobs, job)
 
         # Reserve hard walltime
         job.user_requested_time = job.requested_time

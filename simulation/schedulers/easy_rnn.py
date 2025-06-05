@@ -4,7 +4,7 @@ from procset import ProcSet
 import logging
 # from predictor.knn import KnnWalltimePredictor
 # from predictor.hdem_v2 import HDEMWalltimePrediction
-from predictor.rnn import RNNWalltimePrediction
+from predictor.rnn_v2 import RNNWalltimePredictor
 from copy import deepcopy
 import json
 import numpy as np
@@ -41,7 +41,7 @@ class Easy_rnn(BatsimScheduler):
             self.bs.reject_jobs([job])
 
         # predict job actual walltime
-        predict_walltime = RNNWalltimePrediction(self.finishedJobs, job)
+        predict_walltime = RNNWalltimePredictor(self.finishedJobs, job)
 
         # Reserve hard walltime
         job.user_requested_time = job.requested_time
